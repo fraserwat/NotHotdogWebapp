@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let result = document.getElementById('result');
     let tickMark = document.getElementById('tick-mark');
 
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: 'environment' } } }).then(function (stream) {
         // Release the camera if it's already in use
         if (video.srcObject) {
             video.srcObject.getTracks().forEach(track => track.stop());
@@ -18,7 +18,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }).catch(function (err) {
         console.log(`Error: ${err}`);
     });
-    
 
     snap.addEventListener("click", function () {
         let context = canvas.getContext('2d');
