@@ -72,7 +72,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-body {
+body:not(#take_photo) {
   background-image: url(../images/top-view-fast-food-meal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
