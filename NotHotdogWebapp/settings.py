@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     'https://nothotdogwebapp.herokuapp.com',
     'https://git.heroku.com/nothotdogwebapp.git',
     # TODO: DELETE THIS LATER
-    '*'
+    # '*'
 ]
 
 
