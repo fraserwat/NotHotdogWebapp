@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }).catch(function (err) {
         console.log(`Error: ${err}`);
     });
-
+    
     snap.addEventListener("click", function () {
         let context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, 640, 480);
