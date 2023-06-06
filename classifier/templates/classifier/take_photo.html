@@ -3,8 +3,8 @@
 <head>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌭</text></svg>">
     {% load static %}
-    <!-- <link rel="stylesheet" href="{% static 'classifier/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'classifier/css/camera.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'classifier/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'classifier/css/camera.css' %}">
 </head>
 <body id="take_photo">
     <main id="app">
@@ -18,7 +18,7 @@
             <h1 id="result"></h1>
         </div>
         <div id="camera-container">
-            <video id="video" width="640" height="480" autoplay></video>
+            <input id="video" type="file" name="image" accept="image/*" capture="environment">
             <canvas id="canvas" class="hidden" width="640" height="480"></canvas>
         </div>
         <button id="snap" aria-label="Take Photo"></button>
