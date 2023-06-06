@@ -40,3 +40,20 @@ def take_photo(request):
         return render(request, "classifier/take_photo.html")
     else:
         return HttpResponse("Invalid request", status=400)
+
+def upload_image(request):
+    if request.method == "POST":
+        image = request.FILES["imagefile"]
+
+        # Create a temporary file
+        with tempfile.NamedTemporaryFile(delete=True) as temp:
+            # Write the uploaded file to the temporary file
+            for chunk in image.chunks():
+                temp.write(chunk)
+            temp.flush()  # Ensure all data is written
+
+            result = predict_image(temp.name)
+
+            return render(request, "classifier/upload_image.html", {"result": result})
+
+    return render(request, "classifier/upload_image.html")
