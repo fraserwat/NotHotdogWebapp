@@ -6,6 +6,7 @@ import tempfile
 import base64
 import json
 
+
 def predict_image(image_stream):
     # Pass the path of the temporary file to the predict method
     client = Client("https://fraserwatt-not-hotdog.hf.space/")

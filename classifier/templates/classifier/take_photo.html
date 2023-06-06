@@ -3,8 +3,8 @@
 <head>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌭</text></svg>">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/camera.css' %}">
+    <link rel="stylesheet" href="{% static 'classifier/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'classifier/css/camera.css' %}">
 </head>
 <body>
     <main id="app">
@@ -25,6 +25,6 @@
     </main>
     {% load static %}
     <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-    <script src="{% static 'take_photo.js' %}"></script>
+    <script src="{% static 'classifier/take_photo.js' %}"></script>
 </body>
 </html>
