@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌭</text></svg>">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/camera.css' %}">
+</head>
+<body>
+    <main id="app">
+        <div id="header-wrapper">
+            <header>
+                <h1 class="up-top">SEEFOOD</h1>
+            </header>
+        </div>
+    
+        <div id="result-container" class="hidden">
+            <h1 id="result"></h1>
+        </div>
+        <div id="camera-container">
+            <video id="video" width="640" height="480" autoplay></video>
+            <canvas id="canvas" class="hidden" width="640" height="480"></canvas>
+        </div>
+        <button id="snap" aria-label="Take Photo"></button>
+    </main>
+    {% load static %}
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    <script src="{% static 'take_photo.js' %}"></script>
+</body>
+</html>
