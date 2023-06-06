@@ -28,11 +28,10 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'nothotdogwebapp.herokuapp.com',
-    'https://git.heroku.com/nothotdogwebapp.git',
+    '.nothotdogwebapp.herokuapp.com',
     '127.0.0.1'
 ]
 
